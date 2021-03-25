@@ -9,23 +9,41 @@
 </head>
 <body>
   <div class="container">
-    <div class="panel" id = "p-0">
-        <button id="btn-0">L</button>
-        <div class="context">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic reprehenderit, deleniti quae voluptate molestias aliquid officia nihil est eius rem suscipit asperiores quidem laudantium quasi.
+    <div class="panel" id="p-0">
+        <div class="bookmark">CONTACTS</div>
+        <div class="context" id="contacts">
+            <div>Email</div>
+            <div>GitHub</div>
+            <div>LinkedIn</div>
+            <div>Facebook</div>
         </div>
     </div>
     
-    <div class="panel" id = "p-1">
-        <button id="btn-1">C</button>
-        <div class="context">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic reprehenderit, deleniti quae voluptate molestias aliquid officia nihil est eius rem suscipit asperiores quidem laudantium quasi.
+    <div class="panel main" id ="p-1">
+        <div class="bookmark">WELCOME</div>
+        <div class="context" id="welcome">
+            <div class="profile-img-wrapper">
+                <img src="images/profile.jpg" alt="">
+            </div>
+            <div class="profile-content-wrapper">
+                <h2>Hi, I'm Andy, </h2>
+                <p>a self-taught web-developer</p>    
+            </div>
         </div>
       </div>
-      <div class="panel" id = "p-2">
-        <button id="btn-2">R</button>
-        <div class="context">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic reprehenderit, deleniti quae voluptate molestias aliquid officia nihil est eius rem suscipit asperiores quidem laudantium quasi.
+
+      <div class="panel" id="p-2">
+        <div class="bookmark">PORTFOLIO</div>
+        <div class="context" id="portfolio">
+            <img src="images/portfolio3.jpg" alt="" srcset="">
+            <img src="images/portfolio3.jpg" alt="" srcset="">
+            <img src="images/portfolio3.jpg" alt="" srcset="">
+            <img src="images/portfolio3.jpg" alt="" srcset="">
+            <img src="images/portfolio3.jpg" alt="" srcset="">
+            <img src="images/portfolio3.jpg" alt="" srcset="">
+            <img src="images/portfolio3.jpg" alt="" srcset="">
+
+            
         </div>
       </div>
   </div>
@@ -34,8 +52,8 @@
 <script>
     const panels = [...document.querySelectorAll('.panel')];
     console.log(panels);
-    const buttons = [...document.querySelectorAll('button')];
-    buttons.forEach(el => 
+
+    panels.forEach(el => 
         el.addEventListener('click', () => {
             let num = el.id.slice(-1); 
             console.log(panels[num]);

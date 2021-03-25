@@ -21,15 +21,6 @@ body {
     align-items: center;
 }
 
-.left-panel {   
-    /* z-index: 1; */
-    /* position: fixed; */
-    /* top: 0; */
-    /* left: 0; */
-    /* overflow-x: hidden; */
-    /* transition: 0.5s; */
-}
-
 .panel {
     background-color: #222;
     border: 1px solid orangered;
@@ -40,25 +31,64 @@ body {
     justify-content: center;
     align-items: flex-start;
     transition: 0.5s;
+    cursor: pointer;
+}
+
+.bookmark {
+    font-size: 0.75rem;
+    writing-mode: vertical-lr;
+    text-orientation: upright;
 }
 .context {
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
     display: none;
     font-size: 0.5rem;
+}
+.context img {
+    width: 0%;
 }
 
 .main {
     width: 90%;
     background-color: darkslategrey;
+    cursor: auto;
+    padding: 0.5rem;
 }
-
 .main > .context {
-    display: block;
+    display: flex;
 }
-
-.main > button {
+.main > .bookmark {
     display: none;
 }
+/* ------------------------------------------------------ */
+.main #welcome {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.profile-img-wrapper img {
+    width: 100%
+}
+.profile-content-wrapper {
+    padding: 0 1rem;
+}
+.profile-content-wrapper h2 {
+    color: lightseagreen;
+}
+/* ----------------------------------------------------- */
+.main #portfolio {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.main > #portfolio > img {
+    min-width: 30%;
+    padding: 0.5rem;
+}
 
+/* ------------------------------------------------------ */
 @media (max-width: 600px) {
     .container {
         flex-direction: column;
@@ -74,5 +104,12 @@ body {
         height: 90%;
         align-items: flex-start;
         padding-top: 0.5rem;
+    }
+    .bookmark {
+        writing-mode: horizontal-tb;
+        text-orientation:initial;
+    }
+    .main > #portfolio > img {
+        min-width: 100%;
     }
 }
