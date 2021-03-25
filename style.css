@@ -6,6 +6,12 @@
 :root {
     --color-dark-grey:#090909;
     --color-txt: #fafafa;
+
+    --bg-color: #000900;
+    --prm-color: #00ff00;
+    /* --prm-color: #adff2f; */
+    --sec-color: #002000;
+
     font-size: 5vmin;
 }
 body {
@@ -63,15 +69,16 @@ body {
     display: none;
 }
 /* ------------------------------------------------------ */
-.main #welcome {
+.main #contacts {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
 }
 .profile-img-wrapper img {
-    width: 100%
+    width: 100%;
 }
 .profile-content-wrapper {
-    padding: 0 1rem;
+    line-height: 1.5rem;
 }
 .profile-content-wrapper h2 {
     color: lightseagreen;
@@ -87,8 +94,8 @@ body {
     min-width: 30%;
     padding: 0.5rem;
 }
-
 /* ------------------------------------------------------ */
+
 @media (max-width: 600px) {
     .container {
         flex-direction: column;
