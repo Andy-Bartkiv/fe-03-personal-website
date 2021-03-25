@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Three Tabs Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="panel" id = "p-0">
+        <button id="btn-0">L</button>
+        <div class="context">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic reprehenderit, deleniti quae voluptate molestias aliquid officia nihil est eius rem suscipit asperiores quidem laudantium quasi.
+        </div>
+    </div>
+    
+    <div class="panel" id = "p-1">
+        <button id="btn-1">C</button>
+        <div class="context">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic reprehenderit, deleniti quae voluptate molestias aliquid officia nihil est eius rem suscipit asperiores quidem laudantium quasi.
+        </div>
+      </div>
+      <div class="panel" id = "p-2">
+        <button id="btn-2">R</button>
+        <div class="context">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic reprehenderit, deleniti quae voluptate molestias aliquid officia nihil est eius rem suscipit asperiores quidem laudantium quasi.
+        </div>
+      </div>
+  </div>
+</body>
+
+<script>
+    const panels = [...document.querySelectorAll('.panel')];
+    console.log(panels);
+    const buttons = [...document.querySelectorAll('button')];
+    buttons.forEach(el => 
+        el.addEventListener('click', () => {
+            let num = el.id.slice(-1); 
+            console.log(panels[num]);
+            panels.forEach((panel, i) => {
+                if (i !== num) panel.classList.remove('main');
+            })
+            panels[num].classList.add('main');
+        })
+    ); 
+</script>
+
+</html>
