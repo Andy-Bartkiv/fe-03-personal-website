@@ -6,13 +6,9 @@
 :root {
     --color-dark-grey:#090909;
     --color-txt: #fafafa;
-
-    --bg-color: #000900;
-    --prm-color: #00ff00;
-    /* --prm-color: #adff2f; */
-    --sec-color: #002000;
-
-    font-size: 5vmin;
+    --color-accent: #eece1a;
+    font-size: max(5vmin, 2.5vh);
+    /* (2vw + 2vh + 1vmin)/5 */
 }
 body {
     font-family: "Lato", sans-serif;
@@ -45,6 +41,11 @@ body {
     writing-mode: vertical-lr;
     text-orientation: upright;
 }
+.panel:hover .bookmark{
+    color: var(--color-accent);
+    color: lightseagreen;
+}
+
 .context {
     flex-direction: column;
     justify-content: center;
@@ -64,12 +65,13 @@ body {
 }
 .main > .context {
     display: flex;
+    /* overflow: auto; */
 }
 .main > .bookmark {
     display: none;
 }
 /* ------------------------------------------------------ */
-.main #contacts {
+.main #about {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 0.5rem;
@@ -77,11 +79,51 @@ body {
 .profile-img-wrapper img {
     width: 100%;
 }
-.profile-content-wrapper {
-    line-height: 1.5rem;
-}
+/* .profile-content-wrapper {
+    line-height: 1.5rem; 
+} */
 .profile-content-wrapper h2 {
     color: lightseagreen;
+}
+/* ----------------------------------------------------- */
+
+.contacts-text {
+    display: flex;
+    justify-content: space-around;
+}
+
+.main #contacts {
+    flex-grow: 2;
+}
+
+.contacts-text {
+    background-image: url('images/background.jpg');
+
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+    color: white;
+    font-weight: bold;
+    border: 3px solid #f1f1f1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 80%;
+    padding: 20px;
+    text-align: center;
+}
+
+.contacts-bg-img {
+    background-image: url('images/background.jpg');
+    /* filter: blur(8px);
+    -webkit-filter: blur(8px); */
+    /* Full height */
+    height: 100%;
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 /* ----------------------------------------------------- */
 .main #portfolio {
@@ -96,7 +138,7 @@ body {
 }
 /* ------------------------------------------------------ */
 
-@media (max-width: 600px) {
+@media (max-width: 500px) {
     .container {
         flex-direction: column;
     }
@@ -115,6 +157,14 @@ body {
     .bookmark {
         writing-mode: horizontal-tb;
         text-orientation:initial;
+    }
+
+    .main #about {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 0.5rem;
     }
     .main > #portfolio > img {
         min-width: 100%;
