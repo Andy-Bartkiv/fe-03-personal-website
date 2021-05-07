@@ -23,8 +23,8 @@
                 <hr>
                 <p>Some say that once on board, a man will never want to leave aviation voluntarily. <br>
                     But one should, if he has a passion even greater. <br>
-                    Which is totally true for me. <br> 
-                    After 10+ years in aviation industry, I finally dared to pursue my long-held dream, 
+                    <!-- Which is totally true for me. <br>  -->
+                    With over a decade experience in civil aviation industry, I finally dared to pursue my long-held dream, 
                     applying my problem solving, project management and fast learning skills to master web development. <br>
                     I believe, one day, combination of both expertise will help me create an amazing product.</p>
             </div>
@@ -64,13 +64,16 @@
         <div class="bookmark">PORTFOLIO</div>
         <div class="context" id="portfolio">
             <div class="portfolio-item">
-                <img style = "width: 100%;" src="images/portfolio3.jpg" alt="" srcset="">
+                <img src="images/portfolio3.jpg" alt="" srcset="">
             </div>
             <div class="portfolio-item">
-                <img style = "width: 100%;" src="images/portfolio3.jpg" alt="" srcset="">
+                <img src="images/portfolio3.jpg" alt="" srcset="">
             </div>
             <div class="portfolio-item">
-                <img style = "width: 100%;" src="images/portfolio3.jpg" alt="" srcset="">
+                <img src="images/portfolio3.jpg" alt="" srcset="">
+            </div>
+            <div class="portfolio-item">
+                <img src="images/portfolio3.jpg" alt="" srcset="">
             </div>
             <!-- <img src="images/portfolio3.jpg" alt="" srcset="">
             <img src="images/portfolio3.jpg" alt="" srcset="">
@@ -82,23 +85,8 @@
     </div>
   </div>
 
-  <!-- <script src="main.js"></script> -->
+  <script src="main.js"></script>
 </body>
 
-<script>
-    const panels = [...document.querySelectorAll('.panel')];
-    console.log(panels);
-
-    panels.forEach(el => 
-        el.addEventListener('click', () => {
-            let num = el.id.slice(-1); 
-            console.log(panels[num]);
-            panels.forEach((panel, i) => {
-                if (i !== num) panel.classList.remove('main');
-            })
-            panels[num].classList.add('main');
-        })
-    ); 
-</script>
 
 </html>

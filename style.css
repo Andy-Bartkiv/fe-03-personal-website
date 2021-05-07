@@ -122,7 +122,7 @@ h3 { font-size: 1.5em;}
 
 .about-bio > hr {
     width: 100%;
-    margin: 1em 0;
+    margin: .5em 0;
     height: .15em;
     background: linear-gradient(90deg, var(--color-txt), var(--color-accent));
 }
@@ -211,6 +211,7 @@ h3 { font-size: 1.5em;}
 
 /* ----------------------------------------------------- PORTFOLIO panel*/
 #portfolio {
+    padding: 0.5rem;
     background: #2f4f4fbb;
     width: 100%;
     height: 100%;
@@ -218,19 +219,21 @@ h3 { font-size: 1.5em;}
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: flex-start;
+    overflow: auto;
 }
-.main > #portfolio > img {
-    min-width: 30%;
-    padding: 0.5rem;
+.portfolio-item > img {
+    width: 100%;
 }
 
 .portfolio-item {
+    border: 1px solid yellow;
     width: 30%;
     padding: 0.5rem;
 }
 /* ------------------------------------------------------ MEDIA query */
 
-@media (max-width: 500px) {
+/* 550 px */
+@media (max-width: 90vh) { 
     .container {
         flex-direction: column;
     }
@@ -244,7 +247,7 @@ h3 { font-size: 1.5em;}
     .main {
         height: 90%;
         align-items: flex-start;
-        padding-top: 0.5rem;
+        /* padding-top: 0.5rem; */
     }
     .bookmark {
         writing-mode: horizontal-tb;
@@ -264,10 +267,9 @@ h3 { font-size: 1.5em;}
         /* align-items: center; */
         height: 100%;
     }
-
     .about-img {
         border-radius: 50%;
-        order: 3;
+        order: 1;
         width: 40vh;
         height: 40vh;
         background-position: top 30% center;
@@ -275,12 +277,26 @@ h3 { font-size: 1.5em;}
         background-size: 100%;
         justify-self: center ;
     }
-
     .about-bio {
-        order: 1;
+        order: 3;
     }
-
     .about-skills {
         order: 2;
+    }
+
+    #portfolio {
+        /* flex-direction: column; */
+        /* align-items: center; */
+        padding-bottom: 0;
+    }
+    .portfolio-item {
+        margin-bottom: .5rem;
+        width: 100%;
+        max-width: 350px;
+        max-width: 65vh;
+    }
+
+    #p2 {
+        border-bottom: 5px solid wheat;
     }
 }
