@@ -90,7 +90,6 @@ svg {
     width: 90%;
     cursor: auto;
     padding: 0;
-
 }
 .main > .bookmark { display: none; }
 .main > .context { display: flex; }
@@ -157,7 +156,7 @@ svg {
     border: 1px solid yellow;
 
 }
-.about-skills > *{
+.about-skills > * {
     padding: 0.25em;
     border: 1px solid yellow;
 }
