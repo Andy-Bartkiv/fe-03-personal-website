@@ -29,7 +29,19 @@ h3 { font-size: 1.5em; }
 
 hr { background: linear-gradient(90deg, var(--color-txt), var(--color-accent)); }
 
-.accent-color { color: var(--color-accent); } 
+a, a:hover, a:focus, a:active {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+}
+
+svg {
+    fill: var(--color-txt);
+    width: auto;
+    height: 1.5em;
+}
+
+.accent-color { color: var(--color-accent); }
 
 .container {
     color: var(--color-txt);
@@ -41,27 +53,33 @@ hr { background: linear-gradient(90deg, var(--color-txt), var(--color-accent)); 
 
 .panel {
     background-color: var(--color-dark-grey);
-    /* border: 2px solid var(--color-border); */
     outline: 2px solid var(--color-border);
     height: 100%;
-    width: min(2rem, 7.5vw);
+    width: max(2rem, 5vw);
     padding-top: 0.5rem;
+    padding-bottom: 0.65rem;
     display: flex;
     justify-content: center;
-    align-items: flex-start;
     cursor: pointer;
     transition: 0.5s;
 }
 
 .bookmark {
-    font-size: 0.75rem;
+    font-size: .75rem;
     writing-mode: vertical-lr;
     text-orientation: upright;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 }
-.panel:hover .bookmark{
+.bookmark > svg { height: 1.25em; }
+
+.panel:hover .bookmark {
     color: var(--color-accent);
     color: var(--color-acc2);
 }
+.panel:hover .bookmark > svg { fill: var(--color-acc2); }
 
 .context {
     display: none;
@@ -69,15 +87,13 @@ hr { background: linear-gradient(90deg, var(--color-txt), var(--color-accent)); 
 }
 
 .main {
-    width: 100%;
+    width: 90%;
     cursor: auto;
     padding: 0;
 
 }
 .main > .bookmark { display: none; }
 .main > .context { display: flex; }
-    /* overflow: none; */
-    /* transition: 0.5s; */
 
 /* ------------------------------------------------------ ABOUT panel*/
 .main #about {
@@ -85,6 +101,7 @@ hr { background: linear-gradient(90deg, var(--color-txt), var(--color-accent)); 
     display: grid;
     grid-template-columns: 2fr 3fr;
     grid-template-rows: 75vh 25vh;
+    font-size: calc((2vw + 2vh + 1vmin)/2);
 }
 
 .about-img {
@@ -104,7 +121,7 @@ hr { background: linear-gradient(90deg, var(--color-txt), var(--color-accent)); 
                 inset 0 0 2em var(--color-bg),
                 inset 0 0 0.5em var(--color-bg),
                 inset 0 0 0.25em var(--color-bg) */
-                
+
 }
 /* .about-img::after {
     content: "";
@@ -113,7 +130,7 @@ hr { background: linear-gradient(90deg, var(--color-txt), var(--color-accent)); 
     background: radial-gradient(#2f4f4f00 25%, #2f4f4f 75%);
 } */
 .about-bio {
-    font-size: calc((2vw + 2vh + 1vmin)/2.2);
+    /* font-size: calc((2vw + 2vh + 1vmin)/2); */
     line-height: 1.5;
     width: 100%;
     padding: .5rem;
@@ -123,7 +140,7 @@ hr { background: linear-gradient(90deg, var(--color-txt), var(--color-accent)); 
 }
 
 .about-bio > hr {
-    width: 100%;
+    width: 97.5%;
     margin: .5em 0;
     height: .15em;
 }
@@ -146,8 +163,8 @@ hr { background: linear-gradient(90deg, var(--color-txt), var(--color-accent)); 
 }
 
 /* ----------------------------------------------------- CONTACTS panel */
-.main#p-1 { 
-    position: relative; 
+.main#p-1 {
+    position: relative;
     background: #2f4f4f;
 }
 
@@ -172,11 +189,6 @@ hr { background: linear-gradient(90deg, var(--color-txt), var(--color-accent)); 
     align-items: center;
 }
 
-#contacts > hr {
-    width: 85%;
-    height: .15em;
-}
-
 .contacts-header {
     width: 90%;
     flex: 0.95;
@@ -188,24 +200,42 @@ hr { background: linear-gradient(90deg, var(--color-txt), var(--color-accent)); 
 .contacts-header > hr {
     width: 20em;
     margin: 1em 0;
-    height: .2em;
+    /* height: .2em; */
+    height: .5vh;
+}
+
+#contacts > hr {
+    width: 75%;
+    height: .5vh;
 }
 
 .contacts-body {
-    font-size: 1.25em;
-    padding: 0.6em;
+    font-size: 2em;
+    padding: .5rem 0;
     flex: .05;
-    width: 84%;
+    width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
 }
 
-.contacts-body > div:hover {
+.contacts-body > svg {
+    fill: var(--color-txt);
+    width: auto;
+    height: 1.25em;
+}
+
+.contacts-body > a > svg {
+    fill: var(--color-txt);
+    width: auto;
+    height: 1.25em;
+}
+
+.contacts-body > a:hover > svg {
     cursor: pointer;
-    color: var(--color-accent);
+    fill: var(--color-accent);
     transition: .5s;
-    transform: scale(1.5, 1.5)
+    transform: scale(1.25, 1.25)
 }
 
 /* ----------------------------------------------------- PORTFOLIO panel*/
@@ -241,24 +271,25 @@ hr { background: linear-gradient(90deg, var(--color-txt), var(--color-accent)); 
 }
 .projects-tags > * {
     border: 1px solid yellow;
+    /* color: var(--color-accent); */
 }
 
 .portfolio-item {
     border: 1px solid yellow;
     /* width: 30%; */
     min-width: 30%;
-    max-width: 25vh;
+    /* max-width: 25vh; */
     /* max-height: 30vh; */
     padding: 0.5rem;
     /* flex: 1 0 auto; */
 }
 
-.portfolio-item > img { width: 100%; }
+.portfolio-item > img { width: 10%; }
 
 /* ------------------------------------------------------ MEDIA query */
 
 /* 550 px */
-@media (max-width: 90vh) { 
+@media (max-width: 90vh) {
     .container {
         flex-direction: column;
     }
@@ -267,18 +298,19 @@ hr { background: linear-gradient(90deg, var(--color-txt), var(--color-accent)); 
         width: 100%;
         justify-content: center;
         align-items: center;
-        padding-top: 0;
+        padding: 0;
     }
     .main {
         height: 85vh;
         align-items: flex-start;
-        /* padding-top: 0.5rem; */
     }
     .bookmark {
         font-size: 2.25vh;
         writing-mode: horizontal-tb;
         text-orientation: initial;
     }
+
+    .bookmark > svg { display: none; }
 
     /* .main #about {
         display: flex;
@@ -296,20 +328,29 @@ hr { background: linear-gradient(90deg, var(--color-txt), var(--color-accent)); 
     .about-img {
         border-radius: 50%;
         order: 1;
-        width: 40vh;
-        height: 40vh;
+        width: 30vh;
+        height: 30vh;
         background-position: top 30% center;
         background-repeat: no-repeat;
         background-size: 100%;
         justify-self: center ;
     }
     .about-bio {
+        font-size: 1.15em;
         order: 3;
+        /* align-items: center; */
+        text-align: center;
     }
     .about-skills {
         order: 2;
     }
 
+    .contacts-header > hr { height: .3em; }
+    #contacts > hr { height: .3em; }
+    
+    .contacts-body > svg {
+        height: 1.5em;
+    }
     #portfolio {
         /* flex-direction: column; */
         /* align-items: center; */
