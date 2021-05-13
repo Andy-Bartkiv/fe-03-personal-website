@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+</head>
+<style>
+    * {
+        box-sizing: border-box;
+        margin: 0; padding: 0;
+    }
+    .container {
+        background-color: lightgray;
+        font-size: 21px;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: stretch;
+    }
+    .container > * {
+        padding: 1rem;
+        border: 1px solid red;
+        flex: .3;
+    }
+
+    .one > img {
+        width: 50%;
+        height: auto;
+    }
+
+</style>
+
+<body>
+    <div class="container">
+        <div class="one">
+            <img src="images/profile.jpg" alt="">
+        </div>
+
+        <div class="two">2</div>
+
+        <div class="treee">3</div>
+    </div>
+</body>
+</html>
