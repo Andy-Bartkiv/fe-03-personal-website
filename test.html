@@ -10,40 +10,161 @@
     * {
         box-sizing: border-box;
         margin: 0; padding: 0;
-    }
-    .container {
-        background-color: lightgray;
-        font-size: 21px;
+    }        
+    body { font-size: 36px; }
+    img { width: 50%; }
+    .wrapper {
         width: 100vw;
         height: 100vh;
         display: flex;
-        flex-wrap: wrap;
-        flex-direction: column;
-        justify-content: space-evenly;
-        align-items: stretch;
+        align-items: center;
+        justify-content: flex-start;
+        overflow: hidden;
     }
-    .container > * {
-        padding: 1rem;
-        border: 1px solid red;
-        flex: .3;
+    .folder {
+        background-color: teal;
+        box-shadow: .5rem 0 .5rem darkslategray;
+        width: 3vw;
+        height: 100vh;
+        z-index: 10;
+    }
+    .container {
+        /* margin: 0 auto; */
+        position: relative;
+        background-color: lightgray;
+        color: orangered;
+        width: 94vw;
+        height: 94vh;
     }
 
-    .one > img {
-        width: 50%;
-        height: auto;
+    .project {
+        cursor: pointer;
+        text-align: right;
+        position: absolute;
+        bottom: 0; left: 0;
+        padding: 1rem;
+        border-right: 1px solid red;
+        border-radius: .5em;
+        box-shadow: .5rem 0 .5rem yellow;
+        height: 100%;
+        width: 60%;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        transition: all .125s, transform .5s;
+    }
+    .show {cursor: auto;}
+    .project:hover { width: 60.5%; }
+    .show:hover { width: 60%; }
+
+    .project:nth-child(1) { left: -50%; z-index: 5; }
+    .project:nth-child(2) { left: -40%; z-index: 4; }
+    .project:nth-child(3) { left: -30%; z-index: 3; }
+    .project:nth-child(4) { left: -20%; z-index: 2; }
+    .project:nth-child(5) { left: -10%; z-index: 1; }
+        
+    .context { display: none; flex: 1; background-color: teal; }
+    .show .context { display: block }
+    .trans { transform: translateX(calc(100%*(5/6))); }
+
+    @media (max-width: 95vh) {
+        .wrapper {
+            flex-direction: column-reverse;
+        }
+        .folder {
+            box-shadow: 0 -.5rem .5rem darkslategray;
+            width: 100vw;
+            height: 3vh;
+        }
+        .project {
+            box-shadow: 0px -.25em .25em .125em grey;
+            height: 60%;
+            width: 100%;
+            flex-direction: column;
+        }
+        .project:hover { height: 61%; width: 100%; }
+        .show:hover { height: 60%; width: 100%; }
+    
+        .project:nth-child(1) { left: 0%; bottom: -10%; z-index: 1; }
+        .project:nth-child(2) { left: 0%; bottom: -20%; z-index: 2; }
+        .project:nth-child(3) { left: 0%; bottom: -30%; z-index: 3; }
+        .project:nth-child(4) { left: 0%; bottom: -40%; z-index: 4; }
+        .project:nth-child(5) { left: 0%; bottom: -50%; z-index: 5; }
+
+        .trans { transform: translateY(calc(-100%*(5/6))) }
     }
 
 </style>
 
 <body>
-    <div class="container">
-        <div class="one">
-            <img src="images/profile.jpg" alt="">
+    <div class="wrapper">
+        <div class="folder"></div>
+        <div class="container">
+            <div class="project" id="p0">0
+                <div class="context">element context</div>
+            </div>
+            <div class="project" id="p1">1
+                <div class="context">element context ........</div>
+            </div>
+            <div class="project" id="p2">2
+                <div class="context">
+                    <img src="images/profile.jpg" alt="" srcset="">
+                </div>
+            </div>
+            <div class="project" id="p3">3
+                <div class="context">element context</div>
+            </div>
+            <div class="project" id="p4">4
+                <div class="context">element context</div>
+            </div>
         </div>
-
-        <div class="two">2</div>
-
-        <div class="treee">3</div>
     </div>
 </body>
+
+<script>
+    function toggleClassTrans(tab) {
+        projects.slice(0, tab).forEach(el => el.classList.remove('trans'));
+        projects.slice(tab).forEach(el => el.classList.add('trans'));
+    }
+
+    function toggleClassShow(tab) {
+        const tabClosed = projects.find(el => el.classList.contains('show'));
+        setTimeout(() => tabClosed.classList.remove('show'), delayContextHide);
+        projects[tab].classList.add('show');
+    }
+
+    function openTab(event) {
+        const tab = projects.indexOf(event.currentTarget);
+        if (activeTab !== tab) {
+            activeTab = tab;
+            toggleClassTrans(activeTab);
+            toggleClassShow(activeTab);
+        }
+    }
+
+    function reverseTabs() {
+        activeTab = projects.length - 1 - activeTab;
+        projects.reverse();
+        toggleClassTrans(activeTab);
+    }
+
+    const projects = [...document.querySelectorAll('.project')];
+    const delayContextHide = 450;
+    
+    const Hex = ['F', 'B', '8', '4', '0']
+    projects.forEach((el, i) => {
+        el.style.background = `#00${Hex[i]}`;
+    });
+
+    let mql = window.matchMedia('(max-width: 95vh)');
+    if (mql.matches) projects.reverse();
+    mql.addEventListener("change", reverseTabs);
+
+    let activeTab = 2;
+    toggleClassTrans(activeTab);
+    projects[activeTab].classList.add('show');
+    
+    projects.forEach(el => el.addEventListener('click', openTab));
+
+</script>
 </html>

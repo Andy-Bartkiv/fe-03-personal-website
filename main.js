@@ -4,7 +4,7 @@ panels.forEach(el => el.addEventListener('click', (event) => {
         event.currentTarget.classList.add('main');
     })
 ); 
-const projects = [...document.querySelectorAll('.portfolio-item')];
+const projects = [...document.querySelectorAll('.project')];
 projects.forEach(el => el.addEventListener('click', (event) => {
         projects.forEach(project => project.classList.remove('active'));
         event.currentTarget.classList.add('active');
