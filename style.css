@@ -277,7 +277,7 @@ svg {
     cursor: pointer;
     position: absolute;
     bottom: 0; left: 0;
-    padding: .75vmax;
+    /* padding: .75vmax; */
     border-radius: .25rem;
     /* box-shadow: .5rem 0 .5rem var(--color-dark-grey); */
     box-shadow: 1vw 0 1vw var(--color-dark-grey);
@@ -288,7 +288,7 @@ svg {
     transition: all .125s, transform .5s;
 }
 
-.show {cursor: auto;}
+.show { cursor: auto; }
 .project:hover { width: 70.5%; }
 .show:hover { width: 70%; }
 
@@ -302,8 +302,6 @@ svg {
  
 .trans { transform: translateX(calc(100%*(6.5/7))); }
 
-.project-context { display: none; z-index: inherit; }
-
 .project-bookmark {
     /* font-size: 2vw; */
     letter-spacing: -.125vh; 
@@ -311,20 +309,37 @@ svg {
     text-orientation: upright;
     font-weight: 600;
     display: flex;
-    justify-content: space-between; 
+    justify-content: flex-start; 
+
+    /* color: black; */
+}
+.project-bookmark > p {    
+    padding: .75vmax;
+    border-left: .1rem solid var(--color-dark-grey);
+    box-shadow: inset -.1em -.0em .1em var(--color-dark-grey);
+    /* box-shadow: -.1em -.0em .1em var(--color-dark-grey), 0em .1em .1em var(--color-bg); */
+    /* box-shadow: -.125vmax 0 .125vmax .125vmax var(--color-accent); */
 }
 
 .project-context {
     display: none;
     /* display: flex; */
-    padding: 0 .25rem;
+    /* padding: 0 .25rem; */
+    padding: .75vmax;
+    padding-bottom: 0;
     flex-wrap: wrap;
     align-content: space-between;
     text-align: center;
 }
+.project-context > * {
+    border: .05rem solid var(--color-dark-grey);
+}
 
-.show > .project-bookmark { color: var(--color-accent); }
-.show > .project-context { display: flex; z-index: inherit; }
+.show > .project-bookmark { 
+    /* color: var(--color-bg-ee);
+    text-shadow: -.1em -.1em .1em var(--color-dark-grey), .1em .1em .1em var(--color-bg-ee); */
+}
+.show > .project-context { display: flex; }
 
 .context-title {
     /* border: 1px solid red; */
@@ -363,15 +378,19 @@ svg {
 }
 .context-view {
     /* border: 1px solid red; */
+    padding: .75vmax;
     order: 61;
     text-align: center;
     flex: 50%;
+    box-shadow: inset -.0em .1em .1em var(--color-dark-grey);
 }
 .context-code {
     /* border: 1px solid red; */
+    padding: .75vmax;
     order: 62;
     text-align: center;
     flex: 50%;
+    box-shadow: inset -.0em .1em .1em var(--color-dark-grey);
 }
 
 .context-img > img { width: 100%; border-radius: .25rem;}
@@ -473,6 +492,10 @@ svg {
         width: 100%;
         flex-direction: row-reverse;
         justify-content: space-between;
+    }
+    .project-bookmark > p {
+        border-left: 0;
+        border-bottom: .25vmax solid var(--color-accent);
     }
 
     .project-context {
