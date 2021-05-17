@@ -1,0 +1,92 @@
+[
+    {   "id" : "01", 
+        "bookmark" : "WIRETAPPING",
+        "title" : "Wiretapping - puzzle game",
+        "tech" : "CSS, HTML, JavaScript, Canvas API, game, puzzle, electronics",
+        "imgSrc" : "images/portfolio3.jpg",
+        "demoHref" : "https://andy-bartkiv.github.io/JS-WT-Game/",
+        "codeHref" : "https://github.com/Andy-Bartkiv/JS-WT-Game",
+        
+        "intro" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit similique quae quia, inventore autem dolor.",
+
+        "description" : "<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum quasi modi, impedit illum dolore eligendi consequuntur nihil deleniti reprehenderit sunt!</p><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla quas voluptatum laudantium praesentium voluptate obcaecati minus numquam, aspernatur incidunt voluptas?</p>"
+    },
+
+    {   "id" : "02", 
+                "bookmark" : "CRYPTO TERMINAL",
+                "title" : "Wiretapping - puzzle game",
+                "tech" : "CSS, HTML, JavaScript, game, puzzle, cryptography",
+                "imgSrc" : "images/portfolio3.jpg",
+                "demoHref" : "#",
+                "codeHref" : "#",
+                
+                "intro" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit similique quae quia, inventore autem dolor.",
+
+                "description" : "<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum quasi modi, impedit illum dolore eligendi consequuntur nihil deleniti reprehenderit sunt!</p><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla quas voluptatum laudantium praesentium voluptate obcaecati minus numquam, aspernatur incidunt voluptas?</p>"
+    },
+
+    {   "id" : "03", 
+        "bookmark" : "NOUGHTS & CROSSES",
+        "title" : "Noughts & Crosses - a classic paper-and-pencil game <br> (also known as Tic-Tac-Toe)",
+        "tech" : "CSS, HTML, JavaScript, game, AI, minimax algorithm",
+        "imgSrc" : "images/portfolio3.jpg",
+        "demoHref" : "#",
+        "codeHref" : "#",
+        
+        "intro" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit similique quae quia, inventore autem dolor.",
+
+        "description" : "<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum quasi modi, impedit illum dolore eligendi consequuntur nihil deleniti reprehenderit sunt!</p><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla quas voluptatum laudantium praesentium voluptate obcaecati minus numquam, aspernatur incidunt voluptas?</p>"
+    },
+
+    {   "id" : "04", 
+        "bookmark" : "TOWER OF HANOI",
+        "title" : "Tower of Hanoi - pyramid puzzle",
+        "tech" : "CSS, HTML, JavaScript, game, recursion algorithm",
+        "imgSrc" : "images/portfolio3.jpg",
+        "demoHref" : "#",
+        "codeHref" : "#",
+        
+        "intro" : "It consists of three rods and a number of disks of different diameters, which can slide onto any rod. The puzzle starts with the disks stacked on one rod in order of decreasing size, the smallest at the top, thus approximating a conical shape. The objective of the puzzle is to move the entire stack to the last rod.",
+
+        "description" : "<p>The objective of the puzzle is to move the entire stack to the last rod, obeying the following simple rules:<br> - Only one disk may be moved at a time.<br> - Each move consists of taking the upper disk from one of the stacks and placing it on top of another stack or an empty rod.<br> - No disk may be placed on top of a disk that is smaller than it.</p><p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum quasi modi, impedit illum dolore eligendi consequuntur nihil deleniti reprehenderit sunt!</p><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla quas voluptatum laudantium praesentium voluptate obcaecati minus numquam, aspernatur incidunt voluptas?</p>"
+    },
+
+    {   "id" : "05", 
+        "bookmark" : "Project 5",
+        "title" : "Coming Soon",
+        "tech" : "CSS, HTML, JavaScript",
+        "imgSrc" : "images/portfolio3.jpg",
+        "demoHref" : "#",
+        "codeHref" : "#",
+        
+        "intro" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit similique quae quia, inventore autem dolor.",
+
+        "description" : "<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum quasi modi, impedit illum dolore eligendi consequuntur nihil deleniti reprehenderit sunt!</p><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla quas voluptatum laudantium praesentium voluptate obcaecati minus numquam, aspernatur incidunt voluptas?</p>"
+    },
+
+    {   "id" : "06", 
+        "bookmark" : "Project 6",
+        "title" : "Coming Soon",
+        "tech" : "CSS, HTML, JavaScript",
+        "imgSrc" : "images/portfolio3.jpg",
+        "demoHref" : "#",
+        "codeHref" : "#",
+        
+        "intro" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit similique quae quia, inventore autem dolor.",
+
+        "description" : "<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum quasi modi, impedit illum dolore eligendi consequuntur nihil deleniti reprehenderit sunt!</p><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla quas voluptatum laudantium praesentium voluptate obcaecati minus numquam, aspernatur incidunt voluptas?</p>"
+    },
+
+    {   "id" : "07", 
+        "bookmark" : "Project 7",
+        "title" : "Coming Soon",
+        "tech" : "CSS, HTML, JavaScript",
+        "imgSrc" : "images/portfolio3.jpg",
+        "demoHref" : "#",
+        "codeHref" : "#",
+        
+        "intro" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit similique quae quia, inventore autem dolor.",
+
+        "description" : "<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum quasi modi, impedit illum dolore eligendi consequuntur nihil deleniti reprehenderit sunt!</p><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla quas voluptatum laudantium praesentium voluptate obcaecati minus numquam, aspernatur incidunt voluptas?</p>"
+    }
+]
