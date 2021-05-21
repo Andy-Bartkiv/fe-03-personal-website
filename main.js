@@ -68,16 +68,16 @@ function populateProject(data, index) {
     if (data[index].id !== '-1') {
         context += `<div class="project-context">`; // <div> to be closed
         context += `<div class="context-title"><h4>${data[index].title}</h4></div>`;
-        context += `<hr class="hr-title">`;
+        context += `<hr class="hr-title"/>`;
         context += `<div class="context-intro"><p>${data[index].intro}</p></div>`;
-        context += `<hr style="order:21; width: 100%">`;
+        context += `<hr class="hr-intro"/>`;
         context += `<div class="context-img"><img src="${data[index].imgSrc}" alt=""></div>`;
         context += `<div class="context-tech">`;
         data[index].tech.split(', ').forEach(tag => context += `<p>${tag}</p>`)
         context += `</div>`;
-        context += `<hr style="order:49; width: 100%">`;
+        context += `<hr class="hr-tech"/>`;
         context += `<div class="context-description">${data[index].description}</div>`;
-        context += `<hr class="hr-links">`;
+        context += `<hr class="hr-links"/>`;
         context += `<a class="context-demo" href="${data[index].demoHref}" target="_blank" rel="noreferrer"><i class="fas fa-eye"></i>&nbsp;&nbsp;Demo</a>`;
         context += `<a class="context-code" href="${data[index].codeHref}" target="_blank" rel="noreferrer"><i class="fas fa-code"></i>&nbsp;&nbsp;GitHub</a>`;
     } else {

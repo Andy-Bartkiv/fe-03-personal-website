@@ -2,29 +2,29 @@
     {   "id" : "01", 
         "bookmark" : "WIRETAPPING",
         "title" : "Wire-Tapping (Electronics) mini-game",
-        "tech" : "HTML + CSS, JavaScript, CanvasAPI, localStorage, puzzle, electronics",
+        "tech" : "HTML + CSS, JavaScript, CanvasAPI, localStorage, electronics, puzzle ",
         "imgSrc" : "images/wiretapping.png",
         "demoHref" : "https://andy-bartkiv.github.io/JS-WT-Game/",
         "codeHref" : "https://github.com/Andy-Bartkiv/JS-WT-Game",
         "intro" : "<p>Electronics mini-game is a logic puzzle, inspired by Sid Meier's Covert Action (1990) classic game.</p><p>Puzzle is solved by switching logic chips to 'fix' the circuit board, powering 'phone' chips while avoiding 'alarm' chips</p>",
-        "description" : "<p>This was my very-first project in vanilla JavaScript, utilizing learning-by-doing approach in my web development self-taught journey.</p><p>The objective was to recreate Sid Meier's vintage mini-game by reverse engineering, sticking to original design and using Canvas API for game animation. Browser localStorage is used to keep player high-scores.</p>"
+        "description" : "<p>This was my very-first project in vanilla JavaScript, utilizing learning-by-doing approach in my web development self-taught journey. The objective was to recreate Sid Meier's vintage mini-game by reverse engineering, sticking to original design and using Canvas API for game animation. Browser localStorage is used to keep player high-scores.</p>"
     },
 
     {   "id" : "02", 
         "bookmark" : "CRYPTO TERMINAL",
         "title" : "Crypto Terminal (Cryptography) mini-game",
-        "tech" : "HTML + CSS, JavaScript, Responsive design, DOM manipulation, CSS animation, puzzle, cryptography",
+        "tech" : "HTML + CSS, JavaScript, Responsive design, DOM manipulation, CSS animation, cryptography puzzle",
         "imgSrc" : "images/cryptography.png",
         "demoHref" : "https://andy-bartkiv.github.io/JS-Cryptography-Game/",
         "codeHref" : "https://github.com/Andy-Bartkiv/JS-Cryptography-Game",
         "intro" : "<p>The Cryptography mini-game is an decryption puzzle, involves switching letters of the English Alphabet to decipher the contents of the scrambled message.</p>",
-        "description" : "<p>My main objective for this project was to recreate by reverse engineering functionality of the inspirational Sid Meier's Cryptography mini-game, sticking to original design and practicing skills with fully responsive design, CSS animation, JavaScript DOM manipulation, fetching JSON data. Additional challenge was to create 'Matrix'-style dynamic wallpaper for the main page, using JavaScript(ES6+) and CSS3 animation only.</p>"
+        "description" : "<p>My main objective for this project was to recreate by reverse engineering functionality of the inspirational Sid Meier's Cryptography mini-game, sticking to original design and practicing responsive design, CSS animation, JavaScript DOM manipulation and fetching JSON data. Additional challenge was to create 'Matrix'-style dynamic wallpaper for the main page, using JavaScript(ES6+) and CSS3 animation only.</p>"
     },
 
     {   "id" : "03", 
         "bookmark" : "NOUGHTS & CROSSES",
         "title" : "Noughts & Crosses game",
-        "tech" : "HTML + CSS, JavaScript, responsive design, UI animation, AI, minimax algorithm, game",
+        "tech" : "HTML + CSS, JavaScript, Responsive design, UI animation, minimax algorithm, 2-player game",
         "imgSrc" : "images/tic-tac-toe.png",
         "demoHref" : "https://andy-bartkiv.github.io/js-15-tic-tac-toe/",
         "codeHref" : "https://github.com/Andy-Bartkiv/js-15-tic-tac-toe",
@@ -35,12 +35,12 @@
     {   "id" : "04", 
         "bookmark" : "TOWER OF HANOI",
         "title" : "Tower of Hanoi pyramid puzzle",
-        "tech" : "HTML + CSS, JavaScript, Responsive design, DOM manipulation, CSS animation, math puzzle, recursion algorithm",
+        "tech" : "HTML + CSS, JavaScript, Responsive design, CSS animation, recursion algorithm, math puzzle",
         "imgSrc" : "images/tower-0.png",
         "demoHref" : "#",
         "codeHref" : "#",
         "intro" : "The Tower of Hanoi (also called the Tower of Brahma or Lucas' Tower), a pyramid-style math puzzle, was invented by the French mathematician Édouard Lucas in 1883. Numerous myths regarding the ancient and mystical nature of the puzzle popped up almost immediately.",
-        "description" : "<p>Besides being interesting math game, this puzzle offers excellent opportunity to practice recursive algorithms implementation. Afterwards I've improved the AI algorithm to solve the puzzle from different starting positions, and added drag-and-drop CSS animation to allow human-player interaction.</p>"
+        "description" : "<p>Besides being interesting math game, this puzzle gave me an excellent opportunity to practice recursive algorithms implementation. In addition I've improved the AI algorithm to solve the puzzle from different starting positions, and added drag-and-drop CSS animation for human-player.</p>"
     },
 
     {   "id" : "-1", 
