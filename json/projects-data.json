@@ -1,92 +1,78 @@
 [
     {   "id" : "01", 
         "bookmark" : "WIRETAPPING",
-        "title" : "Wiretapping - puzzle game",
-        "tech" : "CSS, HTML, JavaScript, Canvas API, game, puzzle, electronics",
-        "imgSrc" : "images/portfolio3.jpg",
+        "title" : "Wire-Tapping (Electronics) mini-game",
+        "tech" : "HTML + CSS, JavaScript, CanvasAPI, localStorage, puzzle, electronics",
+        "imgSrc" : "images/wiretapping.png",
         "demoHref" : "https://andy-bartkiv.github.io/JS-WT-Game/",
         "codeHref" : "https://github.com/Andy-Bartkiv/JS-WT-Game",
-        
-        "intro" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit similique quae quia, inventore autem dolor.",
-
-        "description" : "<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum quasi modi, impedit illum dolore eligendi consequuntur nihil deleniti reprehenderit sunt!</p><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla quas voluptatum laudantium praesentium voluptate obcaecati minus numquam, aspernatur incidunt voluptas?</p>"
+        "intro" : "<p>Electronics mini-game is a logic puzzle, inspired by Sid Meier's Covert Action (1990) classic game.</p><p>Puzzle is solved by switching logic chips to 'fix' the circuit board, powering 'phone' chips while avoiding 'alarm' chips</p>",
+        "description" : "<p>This was my very-first project in vanilla JavaScript, utilizing learning-by-doing approach in my web development self-taught journey.</p><p>The objective was to recreate Sid Meier's vintage mini-game by reverse engineering, sticking to original design and using Canvas API for game animation. Browser localStorage is used to keep player high-scores.</p>"
     },
 
     {   "id" : "02", 
-                "bookmark" : "CRYPTO TERMINAL",
-                "title" : "Wiretapping - puzzle game",
-                "tech" : "CSS, HTML, JavaScript, game, puzzle, cryptography",
-                "imgSrc" : "images/portfolio3.jpg",
-                "demoHref" : "#",
-                "codeHref" : "#",
-                
-                "intro" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit similique quae quia, inventore autem dolor.",
-
-                "description" : "<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum quasi modi, impedit illum dolore eligendi consequuntur nihil deleniti reprehenderit sunt!</p><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla quas voluptatum laudantium praesentium voluptate obcaecati minus numquam, aspernatur incidunt voluptas?</p>"
+        "bookmark" : "CRYPTO TERMINAL",
+        "title" : "Crypto Terminal (Cryptography) mini-game",
+        "tech" : "HTML + CSS, JavaScript, Responsive design, DOM manipulation, CSS animation, puzzle, cryptography",
+        "imgSrc" : "images/cryptography.png",
+        "demoHref" : "https://andy-bartkiv.github.io/JS-Cryptography-Game/",
+        "codeHref" : "https://github.com/Andy-Bartkiv/JS-Cryptography-Game",
+        "intro" : "<p>The Cryptography mini-game is an decryption puzzle, involves switching letters of the English Alphabet to decipher the contents of the scrambled message.</p>",
+        "description" : "<p>My main objective for this project was to recreate by reverse engineering functionality of the inspirational Sid Meier's Cryptography mini-game, sticking to original design and practicing skills with fully responsive design, CSS animation, JavaScript DOM manipulation, fetching JSON data. Additional challenge was to create 'Matrix'-style dynamic wallpaper for the main page, using JavaScript(ES6+) and CSS3 animation only.</p>"
     },
 
     {   "id" : "03", 
         "bookmark" : "NOUGHTS & CROSSES",
-        "title" : "Noughts & Crosses - a classic paper-and-pencil game <br> (also known as Tic-Tac-Toe)",
-        "tech" : "CSS, HTML, JavaScript, game, AI, minimax algorithm",
-        "imgSrc" : "images/portfolio3.jpg",
-        "demoHref" : "#",
-        "codeHref" : "#",
-        
-        "intro" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit similique quae quia, inventore autem dolor.",
-
-        "description" : "<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum quasi modi, impedit illum dolore eligendi consequuntur nihil deleniti reprehenderit sunt!</p><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla quas voluptatum laudantium praesentium voluptate obcaecati minus numquam, aspernatur incidunt voluptas?</p>"
+        "title" : "Noughts & Crosses game",
+        "tech" : "HTML + CSS, JavaScript, responsive design, UI animation, AI, minimax algorithm, game",
+        "imgSrc" : "images/tic-tac-toe.png",
+        "demoHref" : "https://andy-bartkiv.github.io/js-15-tic-tac-toe/",
+        "codeHref" : "https://github.com/Andy-Bartkiv/js-15-tic-tac-toe",
+        "intro" : "Noughts & Crosses (also known as Tic-Tac-Toe) is a classic paper-and-pencil game for two players. Back in 1952, 'OXO', developed by British computer scientist Sandy Douglas, became one of the first known video games.",
+        "description" : "<p>This project was developed for assignment of 'the Odin Project' JavaScript curriculum. Main purpose was to practice knowledge of object constructors and factories, IIFEs, module pattern, private and public functions, scope, closures, etc. Additional challenge was to create unbeatable AI player opponent, based on optimized minimax algorithm.</p>"
     },
 
     {   "id" : "04", 
         "bookmark" : "TOWER OF HANOI",
-        "title" : "Tower of Hanoi - pyramid puzzle",
-        "tech" : "CSS, HTML, JavaScript, game, recursion algorithm",
-        "imgSrc" : "images/portfolio3.jpg",
+        "title" : "Tower of Hanoi pyramid puzzle",
+        "tech" : "HTML + CSS, JavaScript, Responsive design, DOM manipulation, CSS animation, math puzzle, recursion algorithm",
+        "imgSrc" : "images/tower-0.png",
         "demoHref" : "#",
         "codeHref" : "#",
-        
-        "intro" : "It consists of three rods and a number of disks of different diameters, which can slide onto any rod. The puzzle starts with the disks stacked on one rod in order of decreasing size, the smallest at the top, thus approximating a conical shape. The objective of the puzzle is to move the entire stack to the last rod.",
-
-        "description" : "<p>The objective of the puzzle is to move the entire stack to the last rod, obeying the following simple rules:<br> - Only one disk may be moved at a time.<br> - Each move consists of taking the upper disk from one of the stacks and placing it on top of another stack or an empty rod.<br> - No disk may be placed on top of a disk that is smaller than it.</p><p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum quasi modi, impedit illum dolore eligendi consequuntur nihil deleniti reprehenderit sunt!</p><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla quas voluptatum laudantium praesentium voluptate obcaecati minus numquam, aspernatur incidunt voluptas?</p>"
+        "intro" : "The Tower of Hanoi (also called the Tower of Brahma or Lucas' Tower), a pyramid-style math puzzle, was invented by the French mathematician Édouard Lucas in 1883. Numerous myths regarding the ancient and mystical nature of the puzzle popped up almost immediately.",
+        "description" : "<p>Besides being interesting math game, this puzzle offers excellent opportunity to practice recursive algorithms implementation. Afterwards I've improved the AI algorithm to solve the puzzle from different starting positions, and added drag-and-drop CSS animation to allow human-player interaction.</p>"
     },
 
-    {   "id" : "05", 
-        "bookmark" : "Project 5",
+    {   "id" : "-1", 
+        "bookmark" : "5 Coming Soon",
         "title" : "Coming Soon",
         "tech" : "CSS, HTML, JavaScript",
         "imgSrc" : "images/portfolio3.jpg",
         "demoHref" : "#",
         "codeHref" : "#",
-        
-        "intro" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit similique quae quia, inventore autem dolor.",
-
-        "description" : "<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum quasi modi, impedit illum dolore eligendi consequuntur nihil deleniti reprehenderit sunt!</p><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla quas voluptatum laudantium praesentium voluptate obcaecati minus numquam, aspernatur incidunt voluptas?</p>"
+        "intro" : "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        "description" : "<>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum quasi modi, impedit illum dolore eligendi consequuntur nihil deleniti reprehenderit sunt!</p>"
     },
 
-    {   "id" : "06", 
-        "bookmark" : "Project 6",
+    {   "id" : "-1", 
+        "bookmark" : "6 Coming Soon",
         "title" : "Coming Soon",
         "tech" : "CSS, HTML, JavaScript",
         "imgSrc" : "images/portfolio3.jpg",
         "demoHref" : "#",
         "codeHref" : "#",
-        
-        "intro" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit similique quae quia, inventore autem dolor.",
-
-        "description" : "<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum quasi modi, impedit illum dolore eligendi consequuntur nihil deleniti reprehenderit sunt!</p><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla quas voluptatum laudantium praesentium voluptate obcaecati minus numquam, aspernatur incidunt voluptas?</p>"
+        "intro" : "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        "description" : "<>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum quasi modi, impedit illum dolore eligendi consequuntur nihil deleniti reprehenderit sunt!</p>"
     },
 
-    {   "id" : "07", 
-        "bookmark" : "Project 7",
+    {   "id" : "-1", 
+        "bookmark" : "7 Coming Soon",
         "title" : "Coming Soon",
         "tech" : "CSS, HTML, JavaScript",
         "imgSrc" : "images/portfolio3.jpg",
         "demoHref" : "#",
         "codeHref" : "#",
-        
-        "intro" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit similique quae quia, inventore autem dolor.",
-
-        "description" : "<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum quasi modi, impedit illum dolore eligendi consequuntur nihil deleniti reprehenderit sunt!</p><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla quas voluptatum laudantium praesentium voluptate obcaecati minus numquam, aspernatur incidunt voluptas?</p>"
+        "intro" : "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        "description" : "<>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum quasi modi, impedit illum dolore eligendi consequuntur nihil deleniti reprehenderit sunt!</p>"
     }
 ]

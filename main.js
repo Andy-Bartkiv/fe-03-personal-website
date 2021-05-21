@@ -17,7 +17,7 @@ let mql = window.matchMedia('(max-width: 90vh)'); // Media Query List object
 if (mql.matches) projects.reverse();
 mql.addEventListener("change", reverseTabs);
 
-let activeTab = 1;
+let activeTab = 3;
 toggleClassTrans(activeTab);
 projects[activeTab].classList.add('show');
 
@@ -62,16 +62,27 @@ function createProjects(container, maxIndex = 7) {
 };
 
 function populateProject(data, index) {
+    console.log(data[index].id);
     let context = '';
     context += `<div class="project-bookmark"><p>${data[index].bookmark}</p></div>`;
-    context += `<div class="project-context">`; // <div> to be closed
-    context += `<div class="context-title"><p>${data[index].title}</p></div>`;
-    context += `<div class="context-intro"><p>${data[index].intro}</p></div>`;
-    context += `<div class="context-img"><img src="${data[index].imgSrc}" alt=""></div>`
-    context += `<div class="context-tech"><p>${data[index].tech}</p></div>`;
-    context += `<div class="context-description"><p>${data[index].description}</p></div>`;
-    context += `<a class="context-demo" href="${data[index].demoHref}" target="_blank" rel="noreferrer"><i class="fas fa-eye"></i>&nbsp;&nbsp;Demo</a>`;
-    context += `<a class="context-code" href="${data[index].codeHref}" target="_blank" rel="noreferrer"><i class="fas fa-code"></i>&nbsp;&nbsp;GitHub</a>`;
+    if (data[index].id !== '-1') {
+        context += `<div class="project-context">`; // <div> to be closed
+        context += `<div class="context-title"><h4>${data[index].title}</h4></div>`;
+        context += `<hr class="hr-title">`;
+        context += `<div class="context-intro"><p>${data[index].intro}</p></div>`;
+        context += `<hr style="order:21; width: 100%">`;
+        context += `<div class="context-img"><img src="${data[index].imgSrc}" alt=""></div>`;
+        context += `<div class="context-tech">`;
+        data[index].tech.split(', ').forEach(tag => context += `<p>${tag}</p>`)
+        context += `</div>`;
+        context += `<hr style="order:49; width: 100%">`;
+        context += `<div class="context-description">${data[index].description}</div>`;
+        context += `<hr class="hr-links">`;
+        context += `<a class="context-demo" href="${data[index].demoHref}" target="_blank" rel="noreferrer"><i class="fas fa-eye"></i>&nbsp;&nbsp;Demo</a>`;
+        context += `<a class="context-code" href="${data[index].codeHref}" target="_blank" rel="noreferrer"><i class="fas fa-code"></i>&nbsp;&nbsp;GitHub</a>`;
+    } else {
+        context += `<div class="project-context coming-soon">`; // <div> to be closed
+    }
     context += `</div>`;
     return context;
 };

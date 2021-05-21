@@ -35,6 +35,7 @@ h1, h2, h3 { font-weight: 400; }
 h1 { font-size: 4em; }
 h2 { font-size: 2em; }
 h3 { font-size: 1.5em; }
+h4 { font-size: 1.2em; color: var(--color-accent);}
 
 hr { background: linear-gradient(90deg, var(--color-txt), var(--color-accent)); }
 
@@ -96,6 +97,7 @@ svg {
 
 .context {
     display: none;
+    opacity: 0;
     font-size: 0.5rem;
 }
 
@@ -105,7 +107,7 @@ svg {
     padding: 0;
 }
 .main > .bookmark { display: none; }
-.main > .context { display: flex; }
+.main > .context { display: flex; opacity: 1;}
 
 /* ------------------------------------------------------ ABOUT panel*/
 .main #about {
@@ -273,7 +275,7 @@ svg {
 }
 
 .project {
-    font-size: calc((2vw + 2vh + 1vmin)/2);
+    /* font-size: calc((2vw + 2vh + 1vmin)/2); */
     background: var(--color-bg-ee);
     cursor: pointer;
     position: absolute;
@@ -316,32 +318,38 @@ svg {
 .project-bookmark > p {    
     padding: .75vmax;
     border-left: var(--color-txt) .25vw solid;
-
-    /* border-left: .1rem solid var(--color-dark-grey); */
-    /* box-shadow: inset -.1em -.0em .1em var(--color-dark-grey); */
-
-    /* box-shadow: -.1em -.0em .1em var(--color-dark-grey), 0em .1em .1em var(--color-bg); */
-    /* box-shadow: -.125vmax 0 .125vmax .125vmax var(--color-accent); */
 }
 
 .project-context {
     display: none;
     /* display: flex; */
-    /* padding: 0 .25rem; */
     padding: .75vmax;
     padding-bottom: 0;
     flex-wrap: wrap;
     align-content: space-between;
-    text-align: center;
+    /* line-height: 2vw; */
 }
 .project-context > * {
-    border: .05rem solid var(--color-dark-grey);
+    /* border: .05rem solid var(--color-dark-grey); */
 }
 
-.show > .project-bookmark { 
-    /* color: var(--color-bg-ee);
-    text-shadow: -.1em -.1em .1em var(--color-dark-grey), .1em .1em .1em var(--color-bg-ee); */
+.project-context > hr {
+    margin: .1em auto;
+    /* margin-top: 0.1rem; */
+    height: .1vh;
 }
+.hr-title { order:11; width: 95% }
+.hr-links { order:51; width: 100% }
+
+.coming-soon {
+    background-image: url('images/background.jpg');
+    filter: grayscale(50%) blur(3px) opacity(25%);
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: cover; 
+    width: 100%;
+}
+
 .show > .project-bookmark > p { 
     color: var(--color-accent);
     border-color: var(--color-accent);
@@ -350,40 +358,50 @@ svg {
 .show > .project-context { display: flex; }
 
 .context-title {
-    /* border: 1px solid red; */
     flex: 100%;
-    /* text-align: center; */
+    text-align: center;
     display: flex;
     flex-direction: column;
     order: 10;
 }
-/* .context-title > hr {
-    width: 100%;
-    margin-top: 0.25rem;
-    height: .125em;
-} */
 
 .context-intro {
     flex: 100%;
     order: 20;
+    text-align: center;
+    padding: 0 2.5%;
 }
 
 .context-img {
-    /* border: 1px solid red; */
+    filter: grayscale(25%);
     order: 30;
     flex: 65%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .context-tech {
-    /* border: 1px solid red; */
+    /* border-top: .2vh solid var(--color-accent);
+    border-bottom: .2vh solid var(--color-accent); */
     order: 40;
     flex: 35%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.context-tech > * {
+    font-size: .95em;
+    text-align: center;
+    border: .05rem solid var(--color-dark-grey);
 }
 
 .context-description {
-    /* border: 1px solid red; */
-    text-align: justify;
+    text-align: right;
     flex: 100%;
     order: 50;
+    /* line-height: 1.25; */
 }
 
 .context-demo, .context-code {
@@ -479,6 +497,7 @@ svg {
     }
 
     .project {
+        font-size: calc((2vw + 2vh + 1vmin)/2);
         box-shadow: 0 -.25rem .25rem var(--color-dark-grey);
         box-shadow: 0 -1vh 1vh var(--color-dark-grey);
         width: 100%;
@@ -513,25 +532,28 @@ svg {
     }
 
     .project-context {
-        /* padding-bottom: .5rem; */
+        padding-bottom: .25rem;
         /* padding: .5rem 0; */
+        line-height: 1.25;
         flex: 1;
         align-content: space-around;
     }
 
-    .context-img  { flex: 50%; }
-    .context-tech { flex: 50%; }
+    .context-title {display: none;}
+    .hr-title {display: none;}
 
+    .context-img  { flex: 55%; }
+    .context-tech { flex: 45%; }
+
+    .context-description { text-align: center; }
+
+    .hr-links {order: 41;}
     .context-demo {
-        /* border: 1px solid red; */
-        order: 41;
-        text-align: center;
-    }
-    .context-code {
-        /* border: 1px solid red; */
         order: 42;
         text-align: center;
     }
-
-    .project > img { width: 5%; height: 5%; }
+    .context-code {
+        order: 43;
+        text-align: center;
+    }
 }
