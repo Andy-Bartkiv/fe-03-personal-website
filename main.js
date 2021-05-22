@@ -77,6 +77,8 @@ function populateProject(info) {
         context += `<hr class="hr-links"/>`;
         context += `<a class="context-demo" href="${info.demoHref}" target="_blank" rel="noreferrer"><i class="fas fa-eye"></i>&nbsp;&nbsp;Demo</a>`;
         context += `<a class="context-code" href="${info.codeHref}" target="_blank" rel="noreferrer"><i class="fas fa-code"></i>&nbsp;&nbsp;GitHub</a>`;
+        // context += `<a class="context-demo" href="${info.demoHref}" target="_blank" rel="noreferrer"><img src="icons/fa-eye.svg">&nbsp;&nbsp;Demo</a>`;
+        // context += `<a class="context-code" href="${info.codeHref}" target="_blank" rel="noreferrer"><img src="icons/fa-code.svg">&nbsp;&nbsp;GitHub</a>`;
     } else {
         context += `<div class="project-context coming-soon">`; // <div> to be closed
     }

@@ -6,23 +6,11 @@
 }
 :root {
     --color-dark-grey:#222;
-    --color-border: #ffa500; /* orange */
-    --color-border: #f69702; /* orange */
     --color-bg: #2f4f4f; /* darkslategrey */
     --color-bg-ee: #2d4b4b; 
-    --color-txt: #f8efd4;
-    --color-txt: #f4f3f2;
     --color-txt: #f4f2f0;
-
-    /* --color-accent: #eece1a; */
-    /* --color-accent: #051060;  */ /* dark blue */
     --color-accent: #ffa500;
-    --color-acc2: #20b2aa; /* lightseagreen */
-    --color-acc2: #29a3a0; /* custom cyan */
-    --color-acc2: #7fffd4; /* aquamarine */
     --color-acc2: #5fafaf; /* aquamarine */
-
-
     font-size: max(5vmin, 2.5vh);
     /* (2vw + 2vh + 1vmin)/5 */
 }
@@ -34,7 +22,7 @@ h1, h2, h3 { font-weight: 400; }
 h1 { font-size: 4em; }
 h2 { font-size: 2em; }
 h3 { font-size: 1.5em; }
-h4 { font-size: 1.2em; color: var(--color-accent);}
+h4 { font-size: 1.2em; color: var(--color-accent); }
 
 hr { background: linear-gradient(90deg, var(--color-txt), var(--color-accent));
     border-color: #00000000;
@@ -49,17 +37,16 @@ a, a:hover, a:focus, a:active {
 
 svg {
     fill: var(--color-txt);
-    width: auto;
     height: 1.5em;
+    width: auto;
 }
-
-.scale-Y { transform: scaleY(1.1); }
 
 .accent-color { color: var(--color-accent); }
 
 .container {
     color: var(--color-txt);
     height: 100vh;
+    width: 100vw;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -67,7 +54,7 @@ svg {
 
 .panel {
     background-color: var(--color-dark-grey);
-    outline: .1rem solid var(--color-border);
+    outline: .1rem solid var(--color-accent);
     height: 100%;
     width: max(2rem, 5vw);
     padding-top: 0.5rem;
@@ -113,7 +100,7 @@ svg {
 
 /* ------------------------------------------------------ ABOUT panel*/
 .main #about {
-    background: #2f4f4fcc;
+    background: var(--color-bg-ee);
     padding: .5rem;
     display: grid;
     grid-template-columns: 2fr 3fr;
@@ -126,7 +113,7 @@ svg {
 .about-img {
     /* min-height: 20vh; */
     grid-row: 1/3;
-    border: .25vh solid var(--color-border);
+    border: .25vh solid var(--color-accent);
     border-radius: .5em;
     content: "";
     background-image: url('images/profile-3.jpg');
@@ -154,8 +141,7 @@ svg {
     border-top: .25vh solid var(--color-accent);
     border-bottom: .25vh solid var(--color-accent);
 }
-.about-skills > * {
-    /* border: 1px solid yellow; */
+.skill-item {
     flex: 24.5%;
     padding: .25em;
     display: flex;
@@ -163,10 +149,8 @@ svg {
     justify-content: center;
     align-items: center;
 }
-
-/* .skill-item > * {border: 1px solid yellow;} */
+.skill-item > svg { height: 1.75em; }
 .skill-item > i { font-size: 1.75em; }
-.skill-item > img { width: 1.6em; }
 
 .about-bio {
     grid-column: 1/3;
@@ -178,10 +162,10 @@ svg {
     align-items: center;
 }
 
-/* ----------------------------------------------------- CONTACTS panel */
+/* -------------------------------- CONTACTS panel */
 .main#p-1 {
     position: relative;
-    background: #2f4f4f;
+    background: var(--color-bg);
 }
 
 .main#p-1::after {
@@ -216,12 +200,12 @@ svg {
 .contacts-header > hr {
     width: 20em;
     margin: 1em 0;
-    height: .5vh;
+    height: .25vh;
 }
 
 #contacts > hr {
     width: 75%;
-    height: .5vh;
+    height: .25vh;
 }
 
 .contacts-body {
@@ -250,12 +234,12 @@ svg {
 .contacts-body > a:hover > svg {
     cursor: pointer;
     fill: var(--color-accent);
-    transform: scale(1.25, 1.25)
+    transform: scale(1.15, 1.15)
 }
 
-/* ----------------------------------------------------- PORTFOLIO panel --- */
+/* ------------------------------- PORTFOLIO panel --- */
 #portfolio {
-    background: #2f4f4fee;
+    background: var(--color-bg-ee);
     width: 100%;
     height: 100%;
     align-items: center;
@@ -325,8 +309,23 @@ svg {
     padding-bottom: 0;
     flex-wrap: wrap;
     align-content: space-between;
+    text-align: center;
 }
 
+.show > .project-context { display: flex; }
+.show > .project-bookmark > p { 
+    color: var(--color-accent);
+    border-color: var(--color-accent);
+}
+
+.coming-soon {
+    background-image: url('images/background.jpg');
+    filter: grayscale(50%) blur(3px) opacity(25%);
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: cover; 
+    width: 100%;
+}
 .project-context > hr {
     width: 100%;
     margin: .2vh auto;
@@ -338,45 +337,29 @@ svg {
 .hr-tech  { order:49; }
 .hr-links { order:51; }
 
-.coming-soon {
-    background-image: url('images/background.jpg');
-    filter: grayscale(50%) blur(3px) opacity(25%);
-    background-position: right;
-    background-repeat: no-repeat;
-    background-size: cover; 
-    width: 100%;
-}
-
-.show > .project-bookmark > p { 
-    color: var(--color-accent);
-    border-color: var(--color-accent);
-}
-
-.show > .project-context { display: flex; }
-
 .context-title {
+    order: 10;
     flex: 100%;
-    text-align: center;
     display: flex;
     flex-direction: column;
-    order: 10;
 }
 
 .context-intro {
-    flex: 100%;
     order: 20;
-    text-align: center;
+    flex: 100%;
     padding: 0 2.5%;
 }
 
 .context-img {
-    filter: grayscale(25%);
     order: 30;
     flex: 65%;
+    filter: grayscale(25%);
     display: flex;
     align-items: center;
     justify-content: center;
 }
+.context-img > img { width: 98%; border-radius: .25rem; }
+
 .context-tech {
     order: 40;
     flex: 1 35%;
@@ -385,41 +368,44 @@ svg {
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-evenly;
+    font-size: min(1em, 1.5vw);
+    color: var(--color-acc2);
 }
 .context-tech > * {
-    font-size: .95em;
-    text-align: center;
     border-radius: .25em;
     padding: .2em .5em;
     background: #222A;
-    color: var(--color-acc2);
 }
 
-.context-description {
-    text-align: right;
-    flex: 100%;
-    order: 50;
-    /* line-height: 1.25; */
-}
+.context-description { order: 50; flex: 100%; }
 
 .context-demo, .context-code {
+    font-size: 1.1em;
     display: flex;
     justify-content: center;
+    align-items: center;
     border: none;
     cursor: pointer;
     padding: .75vmax;
-    text-align: center;
     flex: 50%;
     background: linear-gradient(90deg, var(--color-bg-ee), #2228, var(--color-bg-ee));
     transition: .25s;
 }
-.context-demo > i, .context-code > i { line-height: normal;} 
-.context-demo:hover, .context-code:hover { color: var(--color-accent); transform: scale(1.1); }
+
 .context-demo { order: 61; }
 .context-code { order: 62; }
-.context-img > img { width: 98%; border-radius: .25rem;}
+.context-demo:hover, 
+.context-code:hover { 
+    color: var(--color-accent); 
+    transform: scale(1.1); 
+}
+/* .context-demo > img, .context-code > img { height: 1em; }  */
+/* .context-demo:hover > img, .context-code:hover > img {
+    filter: invert(56%) sepia(84%) saturate(538%) hue-rotate(359deg) brightness(102%) contrast(105%);
+}  */
 
-/* ------------------------------------------------------ MEDIA query */
+
+/* ------------------------------- MEDIA query */
 
 /* 550 px */
 @media (max-width: 90vh) {
@@ -471,12 +457,7 @@ svg {
     }
     .bio-br { display: none }
 
-    .contacts-header > hr { height: .3em; }
-    #contacts > hr { height: .3em; }
-
-    .contacts-body > svg {
-        height: 1.5em;
-    }
+    .contacts-body > a > svg { height: 1.5em; }
 
     #portfolio { flex-direction: column-reverse; }
 
@@ -523,27 +504,16 @@ svg {
 
     .project-context {
         padding-bottom: .25rem;
-        /* padding: .5rem 0; */
         line-height: 1.25;
         flex: 1;
         align-content: space-around;
     }
-
     .context-title {display: none;}
     .hr-title {display: none;}
-
     .context-img  { flex: 55%; }
-    .context-tech { flex: 45%; }
-
+    .context-tech { flex: 45%; font-size: min(1em, 3.5vw)}
     .context-description { text-align: center; }
-
     .hr-links {order: 41;}
-    .context-demo {
-        order: 42;
-        text-align: center;
-    }
-    .context-code {
-        order: 43;
-        text-align: center;
-    }
+    .context-demo { order: 42; }
+    .context-code { order: 43; }
 }
