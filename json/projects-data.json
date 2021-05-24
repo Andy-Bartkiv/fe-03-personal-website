@@ -6,7 +6,7 @@
         "imgSrc" : "images/wiretapping.png",
         "demoHref" : "https://andy-bartkiv.github.io/JS-WT-Game/",
         "codeHref" : "https://github.com/Andy-Bartkiv/JS-WT-Game",
-        "intro" : "<p>Electronics mini-game is a logic puzzle, inspired by Sid Meier's Covert Action (1990) classic game.</p><p>Puzzle is solved by switching logic chips to 'fix' the circuit board, powering 'phone' chips while avoiding 'alarm' chips</p>",
+        "intro" : "<p>Electronics mini-game is a logic puzzle, inspired by Sid Meier's Covert Action (1990) classic game. Puzzle is solved by switching logic chips to 'fix' the circuit board, powering 'phone' chips while avoiding 'alarm' chips</p>",
         "description" : "<p>This was my very-first project in vanilla JavaScript, utilizing learning-by-doing approach in my web development self-taught journey. The objective was to recreate Sid Meier's vintage mini-game by reverse engineering, sticking to original design and using Canvas API for game animation. Browser localStorage is used to keep player high-scores.</p>"
     },
 

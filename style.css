@@ -388,7 +388,7 @@ svg {
     cursor: pointer;
     padding: .75vmax;
     flex: 50%;
-    background: linear-gradient(90deg, var(--color-bg-ee), #2228, var(--color-bg-ee));
+    background: linear-gradient(90deg, var(--color-bg-ee), #2228 35% 65%, var(--color-bg-ee));
     transition: .25s;
 }
 
