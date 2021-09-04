@@ -117,7 +117,7 @@ svg {
     border-radius: .5em;
     content: "";
     background-image: url('images/profile-3.jpg');
-    filter: grayscale(0%) blur(0px) opacity(100%);
+    filter: grayscale(25%) blur(0px) opacity(100%);
     background-position: top 30% center;
     background-repeat: no-repeat;
     background-size: cover;
