@@ -35,12 +35,12 @@
     {   "id" : "04", 
         "bookmark" : "TOWER OF HANOI",
         "title" : "Tower of Hanoi pyramid puzzle",
-        "tech" : "HTML + CSS, JavaScript, Responsive design, Drag&Drop API, recursive algorithm, math puzzle",
+        "tech" : "JS + HTML + CSS, Responsive design, Drag&Drop API, Touch API, recursive algorithm, math puzzle",
         "imgSrc" : "images/tower-0.png",
         "demoHref" : "https://tower-of-hanoi-43129.web.app",
         "codeHref" : "https://github.com/Andy-Bartkiv/tower-of-hanoi",
         "intro" : "The Tower of Hanoi (also called the Tower of Brahma or Lucas' Tower), a pyramid-style math puzzle, was invented by the French mathematician Édouard Lucas in 1883. Numerous myths regarding the ancient and mystical nature of the puzzle popped up almost immediately.",
-        "description" : "<p>Besides being intiguing math game, this puzzle gave me an excellent opportunity to practice recursive algorithms implementation. In addition I've improved the AI algorithm to solve the puzzle from different starting positions, and added drag-and-drop interface for human-player.</p>"
+        "description" : "<p>Besides being intiguing math game, this puzzle gave me an excellent opportunity to practice recursive algorithms implementation. In addition I've improved the AI algorithm to solve the puzzle from different starting positions. For human interaction I've implemented drag-&-drop interface both for Desktop and Mobile browsers.</p>"
     },
 
     {   "id" : "-1", 
