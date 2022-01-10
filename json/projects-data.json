@@ -47,7 +47,7 @@
         "bookmark" : "WEATHER APP",
         "title" : "Andy's Weather App",
         "tech" : "React JS, Axios HTTP Client, OpenWeatherMap API, React-Globe.gl, Pigeon-Map, Drag'n'Drop",
-        "imgSrc" : "images/background.jpg",
+        "imgSrc" : "images/Weather-App-opt.png",
         "demoHref" : "https://andy-bartkiv.github.io/react-weather-app",
         "codeHref" : "https://github.com/Andy-Bartkiv/react-weather-app",
         "intro" : "After completing several React tutorials I'm putting my newly gained skills to the test in order to develop React Weather App from scratch, with dynamic interactive interface.",
