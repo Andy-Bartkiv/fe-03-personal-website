@@ -54,15 +54,15 @@
         "description" : "<p>The App consumes OpenWeatherMap API for actual weather and forecast data. Its interface consists of three tabs, one for the list of five pre-defined cities, another one allows user to create custom list, and the last one to display interactive Earth Globe/Map. Key features: Axios HTTP client, pigeon-map for 2D map view, react-globe.gl for 3D-Globe view, drag'n'drop, responsive design and animations for better UX.</p>"
     },
 
-    {   "id" : "-1", 
-        "bookmark" : "6 Coming Soon",
-        "title" : "Coming Soon",
-        "tech" : "React",
+    {   "id" : "06", 
+        "bookmark" : "44 - Under Development",
+        "title" : "44: Code Breaking Game",
+        "tech" : "React JS, Node.js, Express, WebSocket, 2-player game, heuristic algorithm",
         "imgSrc" : "images/portfolio3.jpg",
-        "demoHref" : "#",
-        "codeHref" : "#",
-        "intro" : "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-        "description" : "<>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum quasi modi, impedit illum dolore eligendi consequuntur nihil deleniti reprehenderit sunt!</p>"
+        "demoHref" : "https://andy-bartkiv.github.io/react-4-digits-game",
+        "codeHref" : "https://github.com/Andy-Bartkiv/react-4-digits-game",
+        "intro" : "'44' is a variation of Bulls and Cows code-breaking paper'n'pencil game for two players, predating the commercially marketed board game Mastermind.",
+        "description" : " Because the game has simple rules while still being difficult and entertaining, it provides good opportunity for developers to practice some interesting aspects of Software Engineering. First, develop highly interactive game interface in React, flavoured with nice animations. Second, explore some back-end tech to enable online 2-player game mode. And lastly, create code-breaking heuristic algorithm for AI opponent."
     },
 
     {   "id" : "-1", 
